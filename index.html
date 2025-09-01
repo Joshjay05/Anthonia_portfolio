@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Omolola Anthonia Eddo - Educator & Visionary Leader</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* HEADER & NAVIGATION */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #2563eb;
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #2563eb;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(90deg, #2563eb, #7c3aed);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .contact-btn {
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        cursor: pointer;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+      }
+
+      .contact-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      }
+
+      /* HERO SECTION */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 120px 50px 80px;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        position: relative;
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 60px;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1.1;
+        margin-bottom: 20px;
+        font-weight: 800;
+        background: linear-gradient(135deg, #1e293b, #2563eb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+        color: #64748b;
+        margin-bottom: 30px;
+        font-weight: 500;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+        color: #475569;
+        margin-bottom: 40px;
+        line-height: 1.7;
+      }
+
+      .hero-languages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+
+      .language-badge {
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: #2563eb;
+        padding: 15px 30px;
+        border: 2px solid #2563eb;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-secondary:hover {
+        background: #2563eb;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .hero-image {
+        position: relative;
+      }
+
+      .hero-image img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .floating-card {
+        position: absolute;
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      .floating-card.achievements {
+        top: 20px;
+        left: -20px;
+        font-weight: 600;
+        color: #2563eb;
+      }
+
+      .floating-card.impact {
+        bottom: 20px;
+        right: -20px;
+        font-weight: 600;
+        color: #7c3aed;
+      }
+
+      /* ABOUT SECTION */
+      .about {
+        padding: 100px 50px;
+        background: white;
+      }
+
+      .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .about-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #1e293b;
+        font-weight: 700;
+      }
+
+      .about-content p {
+        font-size: 1.1rem;
+        color: #64748b;
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 20px;
+        background: #f8fafc;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      .stat-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #2563eb;
+        display: block;
+      }
+
+      .stat-label {
+        color: #64748b;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+
+      /* SERVICES SECTION */
+      .services {
+        padding: 100px 50px;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      }
+
+      .services-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .services h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #1e293b;
+        font-weight: 700;
+      }
+
+      .services-subtitle {
+        font-size: 1.2rem;
+        color: #64748b;
+        margin-bottom: 60px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-align: left;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-card.featured {
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        color: white;
+      }
+
+      .service-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+      }
+
+      .service-card.featured .service-icon {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .service-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .service-card p {
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      .service-card.featured p {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      /* EXPERIENCE SECTION */
+      .experience {
+        padding: 100px 50px;
+        background: white;
+      }
+
+      .experience-container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .experience h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 60px;
+        color: #1e293b;
+        font-weight: 700;
+      }
+
+      .experience-content {
+        background: #f8fafc;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .experience-summary h3 {
+        font-size: 1.5rem;
+        color: #2563eb;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .experience-summary h4 {
+        font-size: 1.2rem;
+        color: #1e293b;
+        margin: 30px 0 15px 0;
+        font-weight: 700;
+      }
+
+      .experience-summary p {
+        color: #64748b;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      /* PROJECTS SECTION */
+      .projects {
+        padding: 100px 50px;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      }
+
+      .projects-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .projects h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 60px;
+        color: #1e293b;
+        font-weight: 700;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-image {
+        height: 200px;
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .project-content {
+        padding: 30px;
+      }
+
+      .project-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        color: #1e293b;
+        font-weight: 700;
+      }
+
+      .project-content p {
+        color: #64748b;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tag {
+        background: #e2e8f0;
+        color: #475569;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      /* CONTACT SECTION */
+      .contact {
+        padding: 100px 50px;
+        background: linear-gradient(135deg, #1e293b 0%, #2563eb 100%);
+        color: white;
+        text-align: center;
+      }
+
+      .contact-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .contact p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        opacity: 0.9;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .contact-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px 20px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease;
+      }
+
+      .contact-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .contact-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      /* FOOTER */
+      .footer {
+        background: #0f172a;
+        color: white;
+        padding: 60px 50px 30px;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 40px;
+      }
+
+      .footer-brand h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #2563eb;
+        font-weight: 700;
+      }
+
+      .footer-brand p {
+        color: #94a3b8;
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .footer-contact h4 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        color: #2563eb;
+        font-weight: 700;
+      }
+
+      .contact-info {
+        margin-bottom: 30px;
+      }
+
+      .contact-info p {
+        color: #94a3b8;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contact-info i {
+        width: 16px;
+        text-align: center;
+      }
+
+      .contact-info a {
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: white;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #94a3b8;
+        text-decoration: none;
+        padding: 10px 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .social-link:hover {
+        color: white;
+        background: rgba(37, 99, 235, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .social-link i {
+        font-size: 1.1rem;
+        width: 16px;
+        text-align: center;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #334155;
+        padding-top: 30px;
+        text-align: center;
+        color: #64748b;
+      }
+
+      .footer-bottom p {
+        margin-bottom: 5px;
+      }
+
+      /* RESPONSIVE DESIGN */
+      @media (max-width: 768px) {
+        .navbar {
+          padding: 15px 20px;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          padding: 120px 20px 60px;
+        }
+
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 40px;
+        }
+
+        .about-container {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .services,
+        .experience,
+        .projects,
+        .contact {
+          padding: 80px 20px;
+        }
+
+        .services-grid,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-item {
+          margin-left: 20px;
+        }
+
+        .footer-main {
+          grid-template-columns: 1fr;
+          gap: 40px;
+          text-align: center;
+        }
+
+        .social-links {
+          justify-content: center;
+        }
+      }
+
+      /* ANIMATIONS */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      /* SCROLL REVEAL */
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .scroll-reveal.revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <div class="logo">Dr. Omolola A. Eddo</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <button
+        class="contact-btn"
+        onclick="document.getElementById('contact').scrollIntoView()"
+      >
+        Let's Connect
+      </button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Educator & Visionary Leader</h1>
+          <p class="hero-subtitle">
+            Empowering Global Communities Through Education & Innovation
+          </p>
+          <p class="hero-description">
+            Distinguished educator, community advocate, and multilingual leader
+            dedicated to fostering learning, creativity, and growth across
+            multiple disciplines. Committed to creating meaningful impact
+            through education, sustainability, and social responsibility.
+          </p>
+          <div class="hero-languages">
+            <span class="language-badge"
+              ><i class="fas fa-flag"></i> English</span
+            >
+            <span class="language-badge"
+              ><i class="fas fa-flag"></i> French</span
+            >
+            <span class="language-badge"
+              ><i class="fas fa-flag"></i> Yoruba</span
+            >
+            <span class="language-badge"
+              ><i class="fas fa-flag"></i> Mandarin</span
+            >
+          </div>
+          <div class="hero-cta">
+            <a href="#services" class="btn-primary">Explore Services</a>
+            <a href="#contact" class="btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/asset/lola-1.jpg" alt="" />
+          <div class="floating-card achievements">
+            <div><i class="fas fa-graduation-cap"></i> PhD Holder</div>
+          </div>
+          <div class="floating-card impact">
+            <div><i class="fas fa-globe"></i> Global Impact</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>About Dr. Omolola</h2>
+          <p>
+            Dr. Omolola Anthonia Eddo is a distinguished educator and visionary
+            leader whose career spans across various disciplines including
+            education, sustainability, technology, and business development.
+            With extensive experience in international contexts across Nigeria,
+            the Middle East, and West Africa, she has made significant
+            contributions both locally and globally.
+          </p>
+          <p>
+            Her unique interdisciplinary approach combines academic knowledge,
+            professional experience, and multilingual abilities, enabling her to
+            address complex challenges in innovative ways. As Secretary General
+            of the Nigerians in the Middle East Community, she demonstrates
+            exceptional leadership in community development and advocacy.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <div class="stat-label">Languages Spoken</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5</span>
+              <div class="stat-label">Countries Worked</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1000+</span>
+              <div class="stat-label">Lives Impacted</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            style="
+              width: 100%;
+              height: 500px;
+              background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+              border-radius: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #64748b;
+              font-size: 1.2rem;
+            "
+          >
+            Professional Image Placeholder
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services">
+      <div class="services-container">
+        <h2>My Services</h2>
+        <p class="services-subtitle">
+          Welcome to my professional space! I am dedicated to fostering
+          learning, creativity, and growth across multiple disciplines. Let's
+          work together to achieve your goals and create meaningful impact.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card featured">
+            <div class="service-icon"><i class="fas fa-language"></i></div>
+            <h3>Modern Foreign Languages</h3>
+            <p>
+              Expert instruction in French, ESL, and Mandarin with culturally
+              immersive teaching methods designed for global communication
+              success.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3>Educational Leadership</h3>
+            <p>
+              Leadership development for educators, teaching and learning
+              coaching, and comprehensive curriculum development services.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Educational Evaluation</h3>
+            <p>
+              Data-driven academic performance evaluation, assessment reporting,
+              and strategic decision-making support for institutions.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Corporate Social Responsibility</h3>
+            <p>
+              CSR strategy implementation, community engagement programs, and
+              sustainable development impact assessment.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-camera"></i></div>
+            <h3>Art & Photography</h3>
+            <p>
+              Fine art and conceptual photography services, custom projects, and
+              creative exhibitions that tell compelling visual stories.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-microphone"></i></div>
+            <h3>Media & Content Creation</h3>
+            <p>
+              X Space hosting, podcast production, and content creation across
+              various platforms to amplify your message globally.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>Life Coaching</h3>
+            <p>
+              Professional and personal life coaching focused on decent work,
+              vision building, and career development for young people.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-leaf"></i></div>
+            <h3>Sustainability Consulting</h3>
+            <p>
+              Circular economy implementation, environmental stewardship, and
+              sustainable business practice development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience">
+      <div class="experience-container">
+        <h2>Professional Experience</h2>
+
+        <div class="experience-content">
+          <div class="experience-summary">
+            <h3>Summary of Professional Background</h3>
+            <p>
+              With extensive experience as an international languages teacher
+              and education expert, Dr. Eddo has worked in diverse cultural
+              contexts across Nigeria, the Middle East, and West Africa,
+              specifically in Nigeria, Ghana, Benin Republic, and the United
+              Kingdom. Her career in education spans several years, during which
+              she has developed a strong foundation in teaching various
+              languages, including English, French, and Mandarin, fostering
+              linguistic and cultural exchange between different regions.
+            </p>
+
+            <h4>Teaching and Education Experience</h4>
+            <p>
+              Dr. Eddo holds formal training and certifications in education
+              from reputable institutions in Nigeria, Ghana, Benin Republic, and
+              the United Kingdom. Her academic qualifications have provided her
+              with a deep understanding of diverse teaching methodologies and
+              educational systems. These qualifications have equipped her with
+              the skills necessary to adapt her teaching style to cater to the
+              unique needs of students from different cultural backgrounds and
+              educational settings.
+            </p>
+
+            <h4>Business Project in Agriculture and Healthy Food Production</h4>
+            <p>
+              Alongside her teaching career, Dr. Eddo is actively involved in a
+              business venture focused on sustainable agriculture, healthy food
+              production, and marketing. This project aims to address food
+              security and promote the consumption of nutritious, locally
+              produced food. The initiative involves working with local farmers
+              to promote organic farming techniques, the use of environmentally
+              friendly agricultural practices, and creating a network for
+              distributing fresh, healthy produce to local markets.
+            </p>
+
+            <h4>
+              Secretary General of the Nigerians in the Middle East Community
+              (NGO)
+            </h4>
+            <p>
+              Dr. Eddo serves as the Secretary General of the Nigerians in the
+              Middle East Community, a non-governmental organization dedicated
+              to supporting Nigerian nationals living and working in the Middle
+              East. As Secretary General, she is responsible for overseeing the
+              administrative functions of the organization, coordinating events,
+              managing communication, and engaging with various stakeholders to
+              ensure the success of the community's initiatives.
+            </p>
+
+            <p>
+              Her career spans teaching, business, and community leadership,
+              with a focus on education, sustainable agriculture, and social
+              impact. She brings a unique blend of international experience,
+              entrepreneurial spirit, and a strong commitment to improving the
+              lives of others through education and community service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+      <div class="projects-container">
+        <h2>Notable Projects</h2>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-palette" style="font-size: 3rem"></i>
+              <div style="margin-top: 10px">Pop Arts Week 2013</div>
+            </div>
+            <div class="project-content">
+              <h3>"Everyone is an Actor" - Pop Arts Week</h3>
+              <p>
+                A groundbreaking art and conceptual photography project that
+                explored the intersection of everyday life and art, empowering
+                participants to engage with photography as a medium for
+                self-expression and identity exploration.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Photography</span>
+                <span class="tag">Community Art</span>
+                <span class="tag">Social Impact</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-utensils" style="font-size: 3rem"></i>
+              <div style="margin-top: 10px">Feed the Street</div>
+            </div>
+            <div class="project-content">
+              <h3>Feed the Street Initiative</h3>
+              <p>
+                As project lead for the Feed the Street Initiative, Dr. Eddo
+                organized comprehensive efforts to provide food and essential
+                supplies to underserved communities in Lagos. This impactful
+                project addressed immediate needs while promoting social
+                responsibility and community engagement, demonstrating her
+                commitment to addressing poverty and inequality at the
+                grassroots level.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Community Development</span>
+                <span class="tag">Social Responsibility</span>
+                <span class="tag">Poverty Alleviation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-school" style="font-size: 3rem"></i>
+              <div style="margin-top: 10px">Education Mentorship</div>
+            </div>
+            <div class="project-content">
+              <h3>French Teaching & Mentorship - Ado Primary School</h3>
+              <p>
+                Dr. Eddo volunteered as a French teacher and mentor at Ado
+                Primary School, where she fostered a passion for language and
+                learning among young students. This initiative focused on making
+                language learning accessible and engaging, while providing
+                mentorship that extended beyond the classroom to support
+                students' overall development and confidence.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Education</span>
+                <span class="tag">Language Teaching</span>
+                <span class="tag">Youth Mentorship</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-recycle" style="font-size: 3rem"></i>
+              <div style="margin-top: 10px">Circular Economy</div>
+            </div>
+            <div class="project-content">
+              <h3>Circular Economy Advocacy - Lagos State</h3>
+              <p>
+                Dr. Eddo has been a strong advocate for implementing the
+                circular economy in Lagos State, working tirelessly to raise
+                awareness about sustainable practices that can reduce waste,
+                promote recycling, and create a more environmentally conscious
+                urban ecosystem. Her efforts focus on policy advocacy, community
+                education, and stakeholder engagement to drive systemic change.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Sustainability</span>
+                <span class="tag">Environmental Policy</span>
+                <span class="tag">Urban Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+      <div class="contact-container">
+        <h2>Let's Work Together</h2>
+        <p>
+          Ready to collaborate and create meaningful impact? Whether you're
+          seeking educational expertise, community development solutions, or
+          creative projects, I'm here to help you achieve your goals.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <h3><i class="fas fa-envelope"></i> Email</h3>
+            <p>eddoomolola@gmail.com</p>
+          </div>
+
+          <div class="contact-item">
+            <h3><i class="fas fa-phone"></i> Phone</h3>
+            <p>+234 805 928 6631</p>
+          </div>
+
+          <div class="contact-item">
+            <h3><i class="fas fa-globe-americas"></i> Global Reach</h3>
+            <p>Nigeria • Middle East • West Africa • UK</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px">
+          <a href="mailto:eddoomolola@gmail.com" class="btn-primary"
+            >Start a Conversation</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <h3>Dr. Omolola Anthonia Eddo</h3>
+            <p>Educator • Visionary Leader • Global Changemaker</p>
+            <p>
+              Empowering communities through education, sustainability, and
+              social innovation across multiple continents.
+            </p>
+          </div>
+
+          <div class="footer-contact">
+            <h4>Get In Touch</h4>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:eddoomolola@gmail.com">eddoomolola@gmail.com</a>
+              </p>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+2348059286631">+234 805 928 6631</a>
+              </p>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/feed/?trk=guest_homepage-"
+                target="_blank"
+                class="social-link linkedin"
+              >
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a
+                href="https://www.instagram.com/dranthoniaeddo/profilecard/?igsh=ZjQ1ZG94Zmh3ZGZy"
+                target="_blank"
+                class="social-link instagram"
+              >
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+              <a
+                href="https://x.com/dranthoniaeddo?t=BlGGvOMYCnOyzbSG22bmnQ&s=09"
+                target="_blank"
+                class="social-link twitter"
+              >
+                <i class="fab fa-x-twitter"></i> X (Twitter)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Dr. Omolola Anthonia Eddo. All Rights Reserved.</p>
+          <p>
+            Making global impact through education, innovation, and community
+            empowerment.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 100) {
+          navbar.style.background = "rgba(255, 255, 255, 0.98)";
+          navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
+        } else {
+          navbar.style.background = "rgba(255, 255, 255, 0.95)";
+          navbar.style.boxShadow = "none";
+        }
+      });
+
+      // Scroll reveal animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document
+        .querySelectorAll(".service-card, .project-card, .experience-content")
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.8s ease";
+          observer.observe(el);
+        });
+    </script>
+  </body>
+</html>
